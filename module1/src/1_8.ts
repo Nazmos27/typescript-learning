@@ -12,7 +12,7 @@
         }
     }
 
-    const {contactNo,name:{firstName}} = user
+    const {contactNo,name:{firstName : first}} = user // firstName:first ---> name allias
 
     //Array destructuring
     const myFrnds = ['sdfa','asfd','dfsg','aret','ertg','asrg']
