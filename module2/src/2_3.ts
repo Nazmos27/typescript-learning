@@ -11,7 +11,12 @@
     // const mentors : string[] = ['sakib','jhankar']
     const mentors : GenericArray<string> = ['sakib', 'jhankar']
 
-    const user : GenericArray<{name:string,age:number}> = [
+    type User = {
+        name: string;
+        age : string
+    }
+
+    const user : GenericArray<User> = [ // we can use here type and interface in stead of {name:string,age:number} cause it will get messy when the object contain too many property. SO to make it cleaner we first define them through type or interface then we use it in <> braces
         {
             name : 'Sakib',
             age  : 25
