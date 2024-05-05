@@ -1,7 +1,24 @@
 {
     //promise
-    const createPromise = () => {
-        return new Promise((resolve, reject) =>{
+
+    type Todo = {
+        id : number;
+        userId : number;
+        title : string;
+        completed: boolean;
+    }
+
+    const getTodo = async () : Promise<Todo> => {
+        const response = await fetch("https://jsonplaceholder.typicode.com/todos/1")
+        const result = await response.json()
+        console.log(result);
+        return result;
+    }
+
+    getTodo()
+
+    const createPromise = () : Promise<string> => {
+        return new Promise<string> ((resolve, reject) =>{
             const data : string = "something"
             if(data){
                 resolve(data)
@@ -13,9 +30,10 @@
 
     //calling create promise function
 
-    const showData = async () => {
-        const data = await createPromise();
+    const showData = async () : Promise<string> => {
+        const data : string = await createPromise();
         console.log(data);
+        return data;
     }
 
     showData()
