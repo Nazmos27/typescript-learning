@@ -25,4 +25,6 @@
     //Utility Methods: Static methods can be used as utility functions that are related to the class but do not depend on specific instance data. These methods can be called directly on the class without the need to create an instance.
 
     Counter.test() //here no instance need to create to call test()
+
+    //using the static keyword in TypeScript provides a way to define class-level functionality and data that is independent of any specific instance of the class.
 }
